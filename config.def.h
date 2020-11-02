@@ -9,14 +9,14 @@ static const char *fonts[] = {
 	"monospace:size=14"
 };
 static const char *prompt               = NULL;         /* -p  option; prompt to the left of input field */
-static const char col_bg[]              = "#3c3836";    // Grey 
+static const char col_bg[]              = "#3c3836";    // Dark 
 static const char col_fg[]              = "#ebdbb2";    // White
 static const char col_sel[]             = "#458588";    // Blue
 static const char col_tag[]             = "#98971a";    // Green
 static const char *colors[SchemeLast][2] = {
 	/*                    fg          bg       */
 	[SchemeNorm]    = { col_fg,     col_bg  },
-	[SchemeSel]     = { col_tag,    col_sel },
+	[SchemeSel]     = { col_fg,     col_sel },
 	[SchemeOut]     = { col_fg,     col_bg  },
 };
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
