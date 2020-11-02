@@ -6,7 +6,7 @@ static int centered                     = 1;            /* -c option; centers dm
 static int min_width                    = 500;          /* minimum width when centered */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"monospace:size=15"
+	"monospace:size=14"
 };
 static const char *prompt               = NULL;         /* -p  option; prompt to the left of input field */
 static const char col_bg[]              = "#3c3836";    // Grey 
