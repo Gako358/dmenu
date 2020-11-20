@@ -10,18 +10,17 @@ static const char *fonts[]      =
 	"monospace:size=14"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
-static const char col_bg[]     = "#ebdbb2";    // White 
-static const char col_fg[]     = "#282828";    // Dark
-static const char col_sel[]    = "#83a598";    // Blue
-static const char col_tag[]    = "#928374";    // Gray
-static const char col_high[]   = "#fb4934";    // Red
+static const char col_bg[]     = "#2c2e34";    // Dark
+static const char col_fg[]     = "#e2e2e3";    // White
+static const char col_sel[]    = "#9ed072";    // Green
+static const char col_high[]   = "#fc5d7c";    // Red
 static const char *colors[][2] =
 {
 	/*               fg           bg       */
 	[SchemeNorm] = { col_fg,    col_bg  },
-	[SchemeSel]  = { col_tag,   col_sel },
+	[SchemeSel]  = { col_fg,    col_sel },
 	[SchemeOut]  = { col_fg,    col_bg  },
-	[SchemeSelHighlight]  = { col_fg, col_high  },
+	[SchemeSelHighlight]  = { col_fg, col_sel  },
 	[SchemeNormHighlight] = { col_fg, col_high  },
 };
 static unsigned int lines      = 7;
