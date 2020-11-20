@@ -2,9 +2,9 @@
 /* Default settings; can be overriden by command line. */
 
 static int topbar               = 1;                      /* -b  option; if 0, dmenu appears at bottom */
-static int fuzzy                = 1;                       /* -F  option; if 0, dmenu doesn't use fuzzy matching */
+static int fuzzy                = 0;                       /* -F  option; if 0, dmenu doesn't use fuzzy matching */
 static int center               = 1;                      /* -c  option; if 0, dmenu won't be centered on the screen */
-static int min_width            = 500;                 /* minimum width when centered */
+static int min_width            = 700;                 /* minimum width when centered */
 static const char *fonts[]      =
 {
 	"monospace:size=14"
@@ -20,8 +20,8 @@ static const char *colors[][2] =
 	[SchemeNorm] = { col_fg,    col_bg  },
 	[SchemeSel]  = { col_fg,    col_sel },
 	[SchemeOut]  = { col_fg,    col_bg  },
-	[SchemeSelHighlight]  = { col_fg, col_sel  },
-	[SchemeNormHighlight] = { col_fg, col_high  },
+	[SchemeSelHighlight]  = { col_bg, col_sel  },
+	[SchemeNormHighlight] = { col_fg, col_bg  },
 };
 static unsigned int lines      = 7;
 static unsigned int columns    = 3;
