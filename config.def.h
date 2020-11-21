@@ -16,7 +16,7 @@ static int instant = 0;                     /* -n  option; if 1, selects matchin
 #endif // INSTANT_PATCH
 #if CENTER_PATCH
 static int center = 1;                      /* -c  option; if 0, dmenu won't be centered on the screen */
-static int min_width = 500;                 /* minimum width when centered */
+static int min_width = 700;                 /* minimum width when centered */
 #endif // CENTER_PATCH
 /* -fn option overrides fonts[0]; default X11 font or font set */
 #if PANGO_PATCH
@@ -28,8 +28,13 @@ static char *fonts[] =
 static const char *fonts[] =
 #endif // XRESOURCES_PATCH
 {
-	"monospace:size=10"
+	"monospace:size=14"
 };
+
+static const char col_bg[]     = "#2c2e34";    // Dark
+static const char col_fg[]     = "#e2e2e3";    // White
+static const char col_sel[]    = "#9ed072";    // Green
+
 #endif // PANGO_PATCH
 #if MANAGED_PATCH
 static char *prompt            = NULL;      /* -p  option; prompt to the left of input field */
@@ -61,9 +66,9 @@ static const char *colors[][2] =
 #endif // XRESOURCES_PATCH
 {
 	/*               fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#222222" },
-	[SchemeSel]  = { "#eeeeee", "#005577" },
-	[SchemeOut]  = { "#000000", "#00ffff" },
+	[SchemeNorm] = { col_fg,    col_bg      },
+	[SchemeSel]  = { col_fg,    col_sel     },
+	[SchemeOut]  = { col_fg,    col_bg      },
 	#if MORECOLOR_PATCH
 	[SchemeMid]  = { "#eeeeee", "#770000" },
 	#endif // MORECOLOR_PATCH
@@ -76,10 +81,10 @@ static const char *colors[][2] =
 	#endif // HIGHPRIORITY_PATCH
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
-static unsigned int lines      = 0;
+static unsigned int lines      = 7;
 #if GRID_PATCH
 /* -g option; if nonzero, dmenu uses a grid comprised of columns and lines */
-static unsigned int columns    = 0;
+static unsigned int columns    = 3;
 #endif // GRID_PATCH
 #if LINE_HEIGHT_PATCH
 static unsigned int lineheight = 0;         /* -h option; minimum height of a menu line     */
